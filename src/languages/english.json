@@ -1,0 +1,68 @@
+{
+  "carousel": {
+    "title": "",
+    "products": [
+      {
+        "id": 1,
+        "image": "images/Imagen1.png",
+        "title": "Premium Headphones",
+        "description": "Crystal clear sound with active noise cancellation. 30-hour battery.",
+        "price": "$299"
+      },
+      {
+        "id": 2,
+        "image": "images/Imagen2.png",
+        "title": "Smartwatch Pro",
+        "description": "Complete health monitoring with built-in GPS. 50m water resistant.",
+        "price": "$199"
+      },
+      {
+        "id": 3,
+        "image": "images/Imagen3.png",
+        "title": "Ultra Gaming Laptop",
+        "description": "RTX 4070, 32GB RAM, 144Hz screen. Extreme gaming performance.",
+        "price": "$1,499"
+      },
+      {
+        "id": 4,
+        "image": "images/Imagen4.png",
+        "title": "Mirrorless Camera",
+        "description": "45MP full-frame sensor. 8K video and advanced stabilization.",
+        "price": "$2,199"
+      },
+      {
+        "id": 5,
+        "image": "images/Imagen5.png",
+        "title": "Pro Tablet 12.9\"",
+        "description": "M1 chip, Liquid Retina XDR display. Perfect for design and editing.",
+        "price": "$999"
+      },
+      {
+        "id": 6,
+        "image": "images/Imagen6.png",
+        "title": "Pro Tablet 12.9\"",
+        "description": "M1 chip, Liquid Retina XDR display. Perfect for design and editing.",
+        "price": "$999"
+      },
+      {
+        "id": 7,
+        "image": "images/Imagen7.png",
+        "title": "Pro Tablet 12.9\"",
+        "description": "M1 chip, Liquid Retina XDR display. Perfect for design and editing.",
+        "price": "$999"
+      }
+    ]
+  },
+  "titulo-pagina": "Welcome to Home",
+  "subtitulo": "This is your home page. Here goes the main content.",
+  "seccion1": "Products Section",
+  "parrafo-seccion1": "This is an example paragraph to show how internationalization can be used in an application. Here you can add any text you want to translate into English. Remember that it's important to maintain language consistency throughout the application to provide a better user experience. You can include instructions, descriptions, or any other type of content that's relevant to your application. Internationalization makes your app accessible to a wider audience, which can increase its popularity and success. Don't forget to review the translation to ensure it's accurate and appropriate for your application's context!",
+  "seccion2": "Section 2 Name",
+  "parrafo-seccion2": "This is descriptive text where you can explain your product, service, or any relevant information. The design is modern, clean, and adapts to different screen sizes.",
+  "parrafo-seccion2a": "You can add more description about this image; the text should be short but clear and concise.",
+  "seccion3": "Section 3",
+  "seccion3a": "Section 3 Subtitle",
+  "seccion4": "Section 4 Title",
+  "titulo-footer1": "Thank you for visiting our app!",
+  "texto-footer1": "We hope you enjoy exploring all the features we offer..."
+}

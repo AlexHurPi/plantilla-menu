@@ -1,0 +1,148 @@
+
+/* header-styles.css */
+.custom-header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);  
+}
+
+/* Contenedor principal */
+.custom-header__container {
+  padding: 0.5rem 1.5rem;
+}
+
+/* Marca / logo */
+.custom-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.custom-header__logo-placeholder {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.custom-header__brand-text {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #f9fafb;
+}
+
+/* Menú */
+.custom-header__menu {
+  margin-top: 0.5rem;
+}
+
+/* Quitar bullets y acomodar horizontal en desktop */
+.custom-header__nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* En móvil, el ul ya se muestra en columna por Bootstrap (flex-column),
+   así que no tocamos direction aquí. */
+.custom-header__nav-list .nav-link {
+  color: #e5e7eb;
+  font-weight: 400;
+  padding: 0.5rem 0.75rem;
+  position: relative;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.custom-header__nav-list .nav-link:hover {
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Subrayado moderno en hover */
+.custom-header__nav-list .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.3rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #6366f1, #ec4899);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+.custom-header__nav-list .nav-link:hover::after,
+.custom-header__nav-list .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Botón CTA */
+.custom-header__cta {
+  margin-left: 0.75rem;
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: 500;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  color: #f9fafb;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.custom-header__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(79, 70, 229, 0.45);
+  opacity: 0.96;
+}
+
+/* Hamburguesa */
+.custom-header__toggler {
+  border: none;
+}
+
+.custom-header__toggler:focus {
+  box-shadow: none;
+}
+
+/* Color del icono hamburguesa para navbar-dark */
+.navbar-dark .navbar-toggler-icon {
+  background-image: var(--bs-navbar-toggler-icon-bg);
+}
+
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+  .custom-header__menu {
+    padding-top: 0.5rem;
+  }
+
+  .custom-header__nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.3);
+  }
+
+  .custom-header__cta {
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem 0 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .custom-header__menu {
+    margin-top: 0;
+  }
+}

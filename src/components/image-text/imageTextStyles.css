@@ -1,0 +1,65 @@
+
+.image-text-container {
+    display: flex;
+    flex-direction: row; /* En PC: imagen a la izquierda, texto a la derecha */
+    padding: 1.5rem;
+    max-width: 800px; /* Aumenté un poco para dar más aire */
+    margin: 0 auto;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    gap: 1.5rem; /* Espacio entre imagen y texto */
+}
+
+.image-text-container img {
+    /* En PC: ocupa el 50% del ancho del contenedor */
+    flex: 0 0 50%; /* No crece, no se encoge, ancho fijo 50% */
+    width: 50%;
+    height: auto;
+    object-fit: cover; /* Para que la imagen se vea bien recortada */
+    border-radius: 8px;
+}
+
+.image-text-container .text-content {
+    /* El texto ocupa el resto del espacio */
+    flex: 1; /* Crece para ocupar el espacio disponible */
+    display: flex;
+    flex-direction: column;    
+    padding: 0 1rem; /* Un poco de aire interno */
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0; /* Quitamos margen porque ya está centrado */
+}
+
+.description {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+/* RESPONSIVE: Móvil */
+@media (max-width: 768px) {
+    .image-text-container {
+        flex-direction: column; /* Apila imagen sobre texto */
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .image-text-container img {
+        flex: none; /* En móvil no necesita el flex fijo */
+        width: 100%;
+        height: auto; /* Altura fija para que no sea gigante */
+        object-fit: cover;
+    }
+    
+    .image-text-container .text-content {
+        padding: 0;
+    }
+    
+    .subtitle {
+        font-size: 1.25rem; /* Un poco más pequeña en móvil */
+    }
+}

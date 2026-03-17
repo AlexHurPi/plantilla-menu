@@ -1,0 +1,68 @@
+{
+  "carousel": {
+    "title": "",
+    "products": [
+      {
+        "id": 1,
+        "image": "images/Imagen1.png",
+        "title": "Auriculares Premium",
+        "description": "Sonido cristalino con cancelación de ruido activa. Batería de 30 horas.",
+        "price": "$299"
+      },
+      {
+        "id": 2,
+        "image": "images/Imagen2.png",
+        "title": "Smartwatch Pro",
+        "description": "Monitoreo completo de salud con GPS integrado. Resistente al agua 50m.",
+        "price": "$199"
+      },
+      {
+        "id": 3,
+        "image": "images/Imagen3.png",
+        "title": "Laptop Gaming Ultra",
+        "description": "RTX 4070, 32GB RAM, pantalla 144Hz. Rendimiento extremo para gaming.",
+        "price": "$1,499"
+      },
+      {
+        "id": 4,
+        "image": "images/Imagen4.png",
+        "title": "Cámara Mirrorless",
+        "description": "Sensor full-frame 45MP. Video 8K y estabilización avanzada.",
+        "price": "$2,199"
+      },
+      {
+        "id": 5,
+        "image": "images/Imagen5.png",
+        "title": "Tablet Pro 12.9\"",
+        "description": "M1 chip, pantalla Liquid Retina XDR. Perfecta para diseño y edición.",
+        "price": "$999"
+      },
+      {
+        "id": 6,
+        "image": "images/Imagen6.png",
+        "title": "Tablet Pro 12.9\"",
+        "description": "M1 chip, pantalla Liquid Retina XDR. Perfecta para diseño y edición.",
+        "price": "$999"
+      },
+      {
+        "id": 7,
+        "image": "images/Imagen7.png",
+        "title": "Tablet Pro 12.9\"",
+        "description": "M1 chip, pantalla Liquid Retina XDR. Perfecta para diseño y edición.",
+        "price": "$999"
+      }
+    ]
+  },
+  "titulo-pagina": "Bienvenido a Inicio",
+  "subtitulo": "Esta es tu página de inicio. Aquí va el contenido principal.",
+  "seccion1": "Seccion de productos",
+  "parrafo-seccion1": "Este es un párrafo de ejemplo para mostrar cómo se puede usar la internacionalización en una aplicación. Aquí puedes agregar cualquier texto que desees traducir al español. Recuerda que es importante mantener la coherencia en el uso del idioma en toda la aplicación para brindar una mejor experiencia al usuario. Puedes incluir instrucciones, descripciones o cualquier otro tipo de contenido que sea relevante para tu aplicación. La internacionalización permite que tu aplicación sea accesible a una audiencia más amplia, lo que puede aumentar su popularidad y éxito. ¡No olvides revisar la traducción para asegurarte de que sea precisa y adecuada para el contexto de tu aplicación!",
+  "seccion2": "Nombre de la sección 2",
+  "parrafo-seccion2": "Este es un texto descriptivo donde puedes explicar tu producto, servicio o cualquier información relevante. El diseño es moderno, limpio y se adapta a distintos tamaños de pantalla.",
+  "parrafo-seccion2a": "Puedes agregar mas descripcion acerca de esta imagen; el texto debe ser corto pero claro y conciso",
+  "seccion3": "Seccion 3",
+  "seccion3a": "Subtitulo Seccion 3",
+  "seccion4": "titulo Seccion 4",
+  "titulo-footer1": "¡Gracias por visitar nuestra aplicación!",
+  "texto-footer1": "Esperamos que disfrutes explorando todas las características..."
+}

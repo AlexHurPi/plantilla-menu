@@ -1,0 +1,30 @@
+     html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.App > * {
+  min-height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+  
+}
+
+main.flex-grow-1 {
+  flex: 1;
+  background-color: aqua;
+  
+}
+
+.custom-header {  
+  background: rgba(10, 10, 25, 0.95);
+}
+.image-text-section {
+  background-color: rgba(10, 10, 25, 0.95);
+}
+.footer {
+  background-color: rgba(10, 10, 25, 0.95);
+}
