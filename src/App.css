@@ -15,8 +15,7 @@
 
 main.flex-grow-1 {
   flex: 1;
-  background-color: aqua;
-  
+  background: linear-gradient(135deg, #5674D4 20%, #5677D6 35%, #005CD7 100%);
 }
 
 .custom-header {  

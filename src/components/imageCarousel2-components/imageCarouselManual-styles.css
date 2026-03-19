@@ -6,7 +6,7 @@
 /* Contenedor principal */
 .manual-carousel-section {
   max-width: 900px;
-  margin: 4rem auto;
+  margin: 1rem auto;
   padding: 0 1rem;
 }
 
@@ -132,6 +132,8 @@
 }
 
 .price {
+  display: flex;
+  justify-content: space-around;
   font-size: 2rem;
   font-weight: 800;
   color: #059669;
@@ -140,6 +142,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin: 0;
+  
 }
 
 /* Botones navegación */

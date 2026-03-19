@@ -118,8 +118,8 @@ const ImageCarouselManual = () => {
                   <div className="card-content">
                     <h3>{product.title}</h3>
                     <p>{product.description}</p>
-                    <div className="price">{product.price}</div>
-                  </div>
+                    <div className="price"><h1>{product.price}</h1> <h1>{product.price2}</h1> </div>
+                  </div>                    
                 </div>
               </div>
             ))}

@@ -10,7 +10,7 @@ i18n
       es: { translation: spanish },
       en: { translation: english }  // ← Recurso para inglés
     },
-    lng: 'en',  // Idioma por defecto
+    lng: 'es',  // Idioma por defecto
     fallbackLng: 'en',
     interpolation: { escapeValue: false }
   });

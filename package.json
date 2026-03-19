@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://alexhurpi.github.io/plantilla-web2",
+  "homepage": "https://alexhurpi.github.io/plantilla-menu",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

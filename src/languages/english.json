@@ -4,7 +4,7 @@
     "products": [
       {
         "id": 1,
-        "image": "images/Imagen1.png",
+        "image": "images/Imagen1.webp",
         "title": "Premium Headphones",
         "description": "Crystal clear sound with active noise cancellation. 30-hour battery.",
         "price": "$299"
@@ -46,15 +46,15 @@
       },
       {
         "id": 7,
-        "image": "images/Imagen7.png",
+        "image": "images/Imagen7.webp",
         "title": "Pro Tablet 12.9\"",
         "description": "M1 chip, Liquid Retina XDR display. Perfect for design and editing.",
         "price": "$999"
       }
     ]
   },
-  "titulo-pagina": "Welcome to Home",
-  "subtitulo": "This is your home page. Here goes the main content.",
+  "titulo-pagina": "Menu",
+  "subtitulo": "Swipe to see our products.",
   "seccion1": "Products Section",
   "parrafo-seccion1": "This is an example paragraph to show how internationalization can be used in an application. Here you can add any text you want to translate into English. Remember that it's important to maintain language consistency throughout the application to provide a better user experience. You can include instructions, descriptions, or any other type of content that's relevant to your application. Internationalization makes your app accessible to a wider audience, which can increase its popularity and success. Don't forget to review the translation to ensure it's accurate and appropriate for your application's context!",
   "seccion2": "Section 2 Name",
