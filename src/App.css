@@ -22,9 +22,7 @@
   --text-3xl: 2.5rem;
   --text-4xl: 3rem;  
 }
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: inherit;
 }
 img, picture, video,canvas, svg {
