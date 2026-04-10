@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import ImageCarouselManual from '../components/imageCarousel2-components/ImageCarouselManual';
 import './inicio-styles.css';
 import MenuNavegation from '../components/menuNavigation/menuNavigation';
+import {WhatsappButton} from '../components/whatsapp-components/WhatsappButton';
 
 const Inicio = () => {
   const { t } = useTranslation();   
@@ -27,7 +28,9 @@ const Inicio = () => {
           <h2>{t("inicio.carousel3-title")}</h2>   
               <MenuNavegation dataKey="menu.copasyhelados" defaultActive={category3} onDataKey={(dataKey) => setCategory3(dataKey)} color={"#045678"}/>{/*aquí recibes el dataKey*/}
               <ImageCarouselManual dataKey={category3} color={"#045678"}/>              
+        <WhatsappButton />
         </div> 
+        
     </div>
   );
 };

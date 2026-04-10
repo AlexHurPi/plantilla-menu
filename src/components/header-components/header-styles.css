@@ -6,6 +6,7 @@
   top: 0;
   z-index: 1000;
   backdrop-filter: blur(10px);  
+  padding-bottom: 1px;/**Este padding inferior es para quitar la pestaña blanca que se ve por el efecto de alumbrado del componente TabNavigation*/
 }
 /* Marca / logo */
 .custom-header__brand {
