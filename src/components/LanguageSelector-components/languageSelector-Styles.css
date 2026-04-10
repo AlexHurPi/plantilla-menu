@@ -4,7 +4,7 @@
   backdrop-filter: blur(20px);  /* Efecto cristal */
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
-  padding: 10px 16px;
+  padding: 5px 5px;
   font-size: 16px;  /* SF Pro size */
   font-weight: 500;
   color: #1d1d1f;
@@ -30,7 +30,7 @@
   .language-selector {
     font-size: 15px;
     min-width: 110px;
-    padding: 8px 14px;
+    padding: 3px 14px;
   }
 }
 

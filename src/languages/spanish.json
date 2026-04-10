@@ -1,68 +1,427 @@
 {
-  "carousel": {
-    "title": "",
-    "products": [
-      {
-        "id": 1,
-        "image": "images/Imagen1.webp",
-        "title": "Auriculares Premium",
-        "description": "Sonido cristalino con cancelación de ruido activa. Batería de 30 horas.",
-        "price": "$12.000",
-        "price2": "$12.500"
+  "menu":{
+    "postres":[
+      { 
+        "id":"arrozconleche",
+        "image":"images/postres/arroz-con-leche.png",
+        "title":"Arroz con leche"
       },
-      {
-        "id": 2,
-        "image": "images/Imagen2.png",
-        "title": "Smartwatch Pro",
-        "description": "Monitoreo completo de salud con GPS integrado. Resistente al agua 50m.",
-        "price": "$15.000",
-        "price2": "$15.500"
+      { 
+        "id":"obleas",
+        "image":"images/postres/oblea.png",
+        "title":"Obleas"
       },
-      {
-        "id": 3,
-        "image": "images/Imagen3.png",
-        "title": "Laptop Gaming Ultra",
-        "description": "RTX 4070, 32GB RAM, pantalla 144Hz. Rendimiento extremo para gaming.",
-        "price": "$20.000",
-        "price2": "$20.500"
+      { 
+        "id":"merengones",
+        "image":"images/postres/merengon.png",
+        "title":"Merengones"
       },
-      {
-        "id": 4,
-        "image": "images/Imagen4.png",
-        "title": "Cámara Mirrorless",
-        "description": "Sensor full-frame 45MP. Video 8K y estabilización avanzada.",
-        "price": "$5.000",
-        "price2": "$5.500"
+      { 
+        "id":"fresasconcrema",
+        "image":"images/postres/fresas-con-crema.png",
+        "title":"Fresas y frutas con crema"
       },
-      {
-        "id": 5,
-        "image": "images/Imagen5.png",
-        "title": "Tablet Pro 12.9\"",
-        "description": "M1 chip, pantalla Liquid Retina XDR. Perfecta para diseño y edición.",
-        "price": "$7.000",
-        "price2": "$7.500"
+      { 
+        "id":"tortasybrownie",
+        "image":"images/postres/brownie.png",
+        "title":"Tortas y brownie"
+      }      
+    ],
+    "lasañasyensaladas":[
+      { 
+        "id":"lasaña",
+        "image":"images/lasañasyensaladas/lasaña-dulce.png",
+        "title":"Lasañas dulces"
       },
-      {
-        "id": 6,
-        "image": "images/Imagen6.png",
-        "title": "Tablet Pro 12.9\"",
-        "description": "M1 chip, pantalla Liquid Retina XDR. Perfecta para diseño y edición.",
-        "price": "$9.000",
-        "price2": "$9.500"
-      },
-      {
-        "id": 7,
-        "image": "images/Imagen7.webp",
-        "title": "Tablet Pro 12.9\"",
-        "description": "M1 chip, pantalla Liquid Retina XDR. Perfecta para diseño y edición.",
-        "price": "$14.000",
-        "price2": "$14.500"
+      { 
+        "id":"ensalada",
+        "image":"images/lasañasyensaladas/ensalada-frutas.png",
+        "title":"Ensaladas de frutas"
+      }
+    ],
+    "copasyhelados":[
+      { 
+        "id":"copasyhelados",
+        "image":"images/copasyhelados/copa-helado.png",
+        "title":"Copas y helados"
       }
     ]
   },
-  "slogan":"Postres y helados",
+  "carousel": {   
+      "title1": "Arroz con leche",
+      "arrozconleche":[       
+      {
+        "id": 1,
+        "image": "images/postres/arroz-con-leche.png",
+        "title": "DE MI AMÁ",
+        "description": "Queso, arequipe, jalea con trozos de frutos rojos o piña, leche condensada y galleta",
+        "price": "$11.000",
+        "price2": "$12.000"
+      },
+      {
+        "id": 2,
+        "image": "images/postres/arroz-con-leche.png",
+        "title": "TRADICIONAL",
+        "description": "Coco deshidratado, uvas pasas, canela, queso, leche condensada, arequipe y galleta.",
+        "price": "$12.500",
+        "price2": "$13.500"
+      },
+       {
+        "id": 3,
+        "image": "images/postres/arroz-con-leche.png",
+        "title": "PACÍFICO",
+        "description": "Coco caramelizado o jalea de cortado, queso, leche condensada, arequipe y galleta.",
+        "price": "$12.000",
+        "price2": "$13.000"
+      },
+      {
+        "id": 4,
+        "image": "images/postres/arroz-con-leche.png",
+        "title": "QUESO/AREQUIPE",
+        "description": "Queso, leche condensada, arequipe y galleta.",
+        "price": "$12.500",
+        "price2": "$13.500"
+      },
+      {
+        "id": 5,
+        "image": "images/postres/arroz-con-leche.png",
+        "title": "SABOR A CAFÉ",
+        "description": "Arroz con sabor a café, arequipe, coffee delight, leche condensada, queso y galleta.",
+        "price": "$12.500",
+        "price2": "$13.500"
+      },
+      {
+        "id": 6,
+        "image": "images/postres/arroz-con-leche.png",
+        "title": "HELADO/QUESO",
+        "description": "Helado de tu elección, queso, arequipe y leche condensada.",
+        "price": "$14.000",
+        "price2": "$15.000"
+      }
+    ],    
+      "title2": "Obleas",
+      "obleas":[
+  {
+    "id": 1,
+    "image": "images/postres/oblea.png",
+    "title": "ESPONTÁNEA",
+    "description": "Arequipe, crema chantilly.",
+    "price": "$8.500",
+    "price2": "$9.500"
+  },
+  {
+    "id": 2,
+    "image": "images/postres/oblea.png",
+    "title": "EVOLUCIÓN",
+    "description": "Arequipe, crema chantilly, jalea con trozos de frutos rojos y queso.",
+    "price": "$11.000",
+    "price2": "$12.000"
+  },
+  {
+    "id": 3,
+    "image": "images/postres/oblea.png",
+    "title": "FRESA/BANANO",
+    "description": "Fresa, banano, chantilly, arequipe y leche condensada.",
+    "price": "$11.000",
+    "price2": "$12.000"
+  },
+  {
+    "id": 4,
+    "image": "images/postres/oblea.png",
+    "title": "MANI CON PASAS",
+    "description": "Queso, uvas pasas, maní triturado, arequipe y chantilly.",
+    "price": "$11.500",
+    "price2": "$12.500"
+  },
+  {
+    "id": 5,
+    "image": "images/postres/oblea.png",
+    "title": "QUESO/AREQUIPE",
+    "description": "Abundante arequipe con queso y leche condensada.",
+    "price": "$10.500",
+    "price2": "$11.500"
+  },
+  {
+    "id": 6,
+    "image": "images/postres/oblea.png",
+    "title": "MANI CON COCO",
+    "description": "Maní triturado, coco caramelizado, arequipe y chantilly.",
+    "price": "$10.500",
+    "price2": "$11.500"
+  },
+  {
+    "id": 7,
+    "image": "images/postres/oblea.png",
+    "title": "NUTELLA",
+    "description": "Crema de avellana, chantilly, salsa de chocolate, chip de chocolate y queso.",
+    "price": "$12.500",
+    "price2": "$13.500"
+  }
+],
+      "title3": "Merengones",
+      "merengones":[
+  {
+    "id": 1,
+    "image": "images/postres/merengon.png",
+    "title": "CONQUISTADOR",
+    "description": "Suspiro, durazno, guanábana, fresa, mango, jalea con trozos de frutos rojos, chantilly, leche condensada, salsa y chip de chocolate.",
+    "price": "$14.000",
+    "price2": "$15.200"
+  },
+  {
+    "id": 2,
+    "image": "images/postres/merengon.png",
+    "title": "CAZADOR",
+    "description": "Suspiro, helado, queso, durazno, guanábana, fresa, mango, jalea con trozos de frutos rojos, chantilly, leche condensada, salsa y chip de chocolate.",
+    "price": "$18.000",
+    "price2": "$19.200"
+  }
+],
+    "title4":"Fresas y frutas con crema",
+    "fresasconcrema":[
+  {
+    "id": 1,
+    "image": "images/postres/fresas-con-crema.png",
+    "title": "FRESA",
+    "description": "Fresas, jalea casera con trozos de fresa, crema de la casa, arequipe, leche condensada y chantilly.",
+    "price": "$12.500",
+    "price2": "$13.500"
+  },
+  {
+    "id": 2,
+    "image": "images/postres/fresas-con-crema.png",
+    "title": "MARACUMANGO",
+    "description": "Maracuyá, mango, crema de la casa, arequipe, leche condensada y crema chantilly.",
+    "price": "$12.500",
+    "price2": "$13.500"
+  },
+  {
+    "id": 3,
+    "image": "images/postres/fresas-con-crema.png",
+    "title": "FRESA/BANANO",
+    "description": "Fresas, banano, jalea con trozos de fresa, crema de la casa, arequipe, leche condensada y chantilly.",
+    "price": "$12.500",
+    "price2": "$13.500"
+  },
+  {
+    "id": 4,
+    "image": "images/postres/fresas-con-crema.png",
+    "title": "MANGO",
+    "description": "Mango, crema de la casa, arequipe, leche condensada y crema chantilly.",
+    "price": "$12.500",
+    "price2": "$13.500"
+  },
+  {
+    "id": 5,
+    "image": "images/postres/fresas-con-crema.png",
+    "title": "BANANO",
+    "description": "Banano, jalea con trozos de fresa, crema de la casa, arequipe, leche condensada y chantilly.",
+    "price": "$12.500",
+    "price2": "$13.500"
+  },
+  {
+    "id": 6,
+    "image": "images/postres/fresas-con-crema.png",
+    "title": "QUESO/HELADO",
+    "description": "Una o dos frutas de tu elección, mezcladas en una crema de leche casera, acompañada de chantilly, leche condensada, arequipe, helado y queso.",
+    "price": "$17.000",
+    "price2": "$18.200"
+  }
+],
+    "title5": "Tortas y Brownie",
+    "tortasybrownie":[
+  {
+    "id": 1,
+    "image": "images/postres/brownie.png",
+    "title": "BROWNIE HELADO",
+    "description": "Brownie, una bola de helado de tu elección, salsa de chocolate, leche condensada, cereza y crema chantilly.",
+    "price": "$12.000",
+    "price2": "$13.000"
+  },
+  {
+    "id": 2,
+    "image": "images/postres/brownie.png",
+    "title": "TORTA MOJADITA",
+    "description": "Torta bañada en tres leches, acompañada de una jalea casera con trozos de frutos rojos y una bola de helado.",
+    "price": "$11.500",
+    "price2": "$12.500"
+  },
+  {
+    "id": 3,
+    "image": "images/postres/brownie.png",
+    "title": "POSTRE PASIÓN",
+    "description": "Postre de maracuyá acompañado de 1 bola de helado (maracuyá o vainilla) y bañada en una jalea casera de maracuyá.",
+    "price": "$12.500",
+    "price2": "$13.500"
+  }
+],
+  "title6": "Lasañas dulces",
+  "lasaña": [
+    {
+      "id": 1,
+      "image": "images/lasañasyensaladas/lasaña-dulce.png",
+      "title": "DEL BOSQUE",
+      "description": "Capas de bizcochuelo con queso, bañadas en cremas de la casa, una bola de helado, jalea casera con trozos de frutos rojos.",
+      "price": "$14.500",
+      "price2": "$15.500"
+    },
+    {
+      "id": 2,
+      "image": "images/lasañasyensaladas/lasaña-dulce.png",
+      "title": "CARAMELO",
+      "description": "Capas de bizcochuelo con queso, bañadas en cremas de la casa, una bola de helado, arequipe y jalea de cortado.",
+      "price": "$15.000",
+      "price2": "$16.000"
+    },
+    {
+      "id": 3,
+      "image": "images/lasañasyensaladas/lasaña-dulce.png",
+      "title": "TROPICAL",
+      "description": "Capas de bizcochuelo con queso, bañadas en cremas de la casa, una bola de helado y mix de frutos amarillos.",
+      "price": "$15.000",
+      "price2": "$16.000"
+    }
+  ],
+  "title7": "Ensaladas de frutas",
+  "ensalada": [
+    {
+      "id": 1,
+      "image": "images/lasañasyensaladas/ensalada-frutas.png",
+      "title": "URBANA",
+      "description": "Mix de frutas frescas (600g) bañadas en crema de la casa, chantilly, jalea con trozos de frutos rojos y piña calada, queso, leche condensada, galleta y 2 bolas de helado (180g).",
+      "price": "$17.500",
+      "price2": "$18.700"
+    },
+    {
+      "id": 2,
+      "image": "images/lasañasyensaladas/ensalada-frutas.png",
+      "title": "SALVAJE",
+      "description": "Mix de frutas frescas (1100g), bañadas en crema de la casa, chantilly, jalea con trozos de frutos rojos y piña calada, queso, leche condensada, galleta y 4 bolas de helado (360g).",
+      "price": "$28.500",
+      "price2": "$30.000"
+    }
+  ],  
+  "title8": "COPAS Y HELADOS",
+  "copasyhelados": [
+    {
+      "id": 1,
+      "image": "images/copasyhelados/copa-helado.png",
+      "title": "FRUTY HELADO",
+      "description": "2 bolas de helado, mix de frutas frescas, crema de la casa, jalea con trozos de frutos rojos, leche condensada, y barquillo.",
+      "price": "$12.500",
+      "price2": "$13.500"
+    },
+    {
+      "id": 2,
+      "image": "images/copasyhelados/copa-helado.png",
+      "title": "TRADICIÓN COCOA",
+      "description": "2 bolas de helado, salsa de chocolate, burbujas y chips de chocolate, leche condensada, barquillo, cereza y chantilly.",
+      "price": "$13.500",
+      "price2": "$14.500"
+    },
+    {
+      "id": 3,
+      "image": "images/copasyhelados/copa-helado.png",
+      "title": "COPA QUESO",
+      "description": "2 bolas de helado, queso, arequipe, leche condensada, salsa de chocolate, barquillo y chantilly.",
+      "price": "$13.500",
+      "price2": "$14.500"
+    },
+    {
+      "id": 4,
+      "image": "images/copasyhelados/copa-helado.png",
+      "title": "COPA PACÍFICO",
+      "description": "Helado de vainilla, jalea de cocada, dulce de cortado, queso, leche condensada, barquillo y chantilly.",
+      "price": "$14.500",
+      "price2": "$15.500"
+    },
+    {
+      "id": 5,
+      "image": "images/copasyhelados/copa-helado.png",
+      "title": "SUNDAE",
+      "description": "Helado de vainilla con una jalea de tu elección: (fresa, arequipe, piña, frutos rojos, chocolate, dulce cortado, jalea de cocada), barquillo, leche condensada y chantilly.",
+      "price": "$12.500",
+      "price2": "$13.500"
+    },
+    {
+      "id": 6,
+      "image": "images/copasyhelados/copa-helado.png",
+      "title": "COPA PRIMATY",
+      "description": "Base de arroz con leche, 1 bola helado, jalea con trozos de frutos rojos o piña, leche condensada, arequipe, maní triturado y barquillo.",
+      "price": "$12.500",
+      "price2": "$13.500"
+    },
+    {
+      "id": 7,
+      "image": "images/copasyhelados/copa-helado.png",
+      "title": "COPA ORIGEN",
+      "description": "7 bolas de helado, brownie, suspiro, dulce cortado, jalea de frutos rojos, queso, salsa y chips de chocolate, salsa de mora, lechera, arequipe, barquillo, cereza y chantilly.",
+      "price": "$31.000",
+      "price2": "$32.500"
+    },
+    {
+      "id": 8,
+      "image": "images/copasyhelados/copa-helado.png",
+      "title": "COPA HAWAI",
+      "description": "2 bolas de helado, mix de frutos amarillos (Mango, piña calada, duraznos, maracuyá) leche condensada, barquillo y chantilly.",
+      "price": "$13.000",
+      "price2": "$14.000"
+    },
+    {
+      "id": 9,
+      "image": "images/copasyhelados/copa-helado.png",
+      "title": "DELEITE DE LULO",
+      "description": "Helado de vainilla, bañado en abundante pulpa de lulo, leche condensada, barquillo y Chantilly.",
+      "price": "$13.000",
+      "price2": "$14.000"
+    },
+    {
+      "id": 10,
+      "image": "images/copasyhelados/copa-helado.png",
+      "title": "COPA OREO",
+      "description": "1 bola de helado, galletas oreo, salsa de chocolate, arequipe y chantilly.",
+      "price": "$12.500",
+      "price2": "$13.500"
+    },
+    {
+      "id": 11,
+      "image": "images/copasyhelados/copa-helado.png",
+      "title": "BANANA SPLIT",
+      "description": "3 bolas de helado, doble banano, jalea de frutos rojos, salsa de chocolate, leche condensada, barquillo, cereza y chantilly.",
+      "price": "$15.000",
+      "price2": "$16.000"
+    },
+    {
+      "id": 12,
+      "image": "images/copasyhelados/copa-helado.png",
+      "title": "BANANA QUESUDA",
+      "description": "3 bolas de helado, doble banano, queso, jalea de frutos rojos, piña calada, salsa de chocolate, leche condensada, chantilly, cereza y barquillo.",
+      "price": "$18.000",
+      "price2": "$19.000"
+    },
+    {
+      "id": 13,
+      "image": "images/copasyhelados/copa-helado.png",
+      "title": "AFFOGATO",
+      "description": "1 bola de vainilla mezclada en un delicioso café expresso, crema chantilly, galleta, salsa de chocolate y arequipe.",
+      "price": "$11.000",
+      "price2": "$12.000"
+    },
+    {
+      "id": 14,
+      "image": "images/copasyhelados/copa-helado.png",
+      "title": "GRANIZADO DE CAFÉ",
+      "description": "Un licuado perfecto de hielo, café, helado, leche, acompañado de barquillo y chantilly.",
+      "price": "$11.500",
+      "price2": "$12.500"
+    }
+  ],
+
+  "slogan": "Postres y helados",
   "titulo-pagina": "Menú",
   "subtitulo": "Desliza para ver nuestros productos.",
+  "precio1": "Para la mesa",
+  "precio2": "Para llevar",
   "seccion1": "Seccion de productos",
   "parrafo-seccion1": "Este es un párrafo de ejemplo para mostrar cómo se puede usar la internacionalización en una aplicación. Aquí puedes agregar cualquier texto que desees traducir al español. Recuerda que es importante mantener la coherencia en el uso del idioma en toda la aplicación para brindar una mejor experiencia al usuario. Puedes incluir instrucciones, descripciones o cualquier otro tipo de contenido que sea relevante para tu aplicación. La internacionalización permite que tu aplicación sea accesible a una audiencia más amplia, lo que puede aumentar su popularidad y éxito. ¡No olvides revisar la traducción para asegurarte de que sea precisa y adecuada para el contexto de tu aplicación!",
   "seccion2": "Nombre de la sección 2",
@@ -73,4 +432,5 @@
   "seccion4": "titulo Seccion 4",
   "titulo-footer1": "¡Gracias por visitar nuestra aplicación!",
   "texto-footer1": "Esperamos que disfrutes explorando todas las características..."
+  }
 }

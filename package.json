@@ -14,10 +14,10 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
-    "i18next": "^25.8.13",
+    "i18next": "^25.10.10",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-i18next": "^16.5.4",
+    "react-i18next": "^16.6.6",
     "react-player": "^3.4.0",
     "react-router-dom": "^7.13.1"
   },

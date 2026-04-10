@@ -1,0 +1,128 @@
+/* TUS ESTILOS EXISTENTES MANTENIDOS... */
+/* ... (todo tu CSS anterior sin cambios) ... */
+
+/* NUEVOS ESTILOS DEL MODAL - AGREGAR AL FINAL */
+.fullscreen-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-height: 90vh;
+}
+
+.modal-close {
+  position: absolute;
+  top: -5rem;
+  right: 0;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: rgba(255,255,255,0.4);
+  transform: scale(1.1);
+}
+
+.modal-prev, .modal-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease;
+}
+
+.modal-prev { left: -3rem; }
+.modal-next { right: -3rem; }
+
+.modal-prev:hover, .modal-next:hover {
+  background: rgba(255,255,255,0.4);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.modal-content img {
+  max-width: 70%;
+  max-height: 90vh;
+  object-fit: contain;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+  border-radius: 16px;
+}
+
+.modal-info {
+  max-width: 400px;
+  color: white;
+  text-align: left;
+  padding: 2rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.modal-info h3 { 
+  font-size: 2rem; 
+  margin: 0 0 1rem; 
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.modal-info p { 
+  font-size: 1.1rem; 
+  margin: 0 0 1.5rem; 
+  line-height: 1.6;
+}
+
+.modal-info .price { 
+  font-size: 2.5rem; 
+  font-weight: 800; 
+}
+
+/* RESPONSIVO MODAL */
+@media (max-width: 768px) {
+  .fullscreen-modal { padding: 1rem; }
+  .modal-content { 
+    flex-direction: column;
+    gap: 1.5rem;
+    max-height: 95vh;
+  }
+  .modal-prev { left: 1rem; }
+  .modal-next { right: 1rem; }
+  .modal-close { top: -3rem; }
+  .modal-content img { max-width: 95%; }
+  .modal-info { max-width: 90%; }
+}

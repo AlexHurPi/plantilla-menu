@@ -1,0 +1,152 @@
+/* menu-navegacion.css */
+
+/* --------- BASE (mobile first) --------- */
+.menu-nav {
+  display: flex;
+  /*background: #222b2e;*/
+  border-radius: 16px;
+  padding: 6px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.icons-container {
+  position: relative;
+  display: flex;
+  flex: 1;
+  gap: 2px;
+}
+
+.menu-icon-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 4px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 10px;
+}
+
+.menu-icon-container:hover {
+  background: rgba(246, 180, 123, 0.1);
+}
+
+.menu-icon-container.active {
+  color: #f6b47b;
+}
+
+.menu-icon {
+  font-size: 18px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.menu-label {
+  font-size: 9px;
+  font-weight: 500;
+  opacity: 0.8;
+  color: #ffffff;
+  text-align: center;
+}
+
+.menu-icon-container.active .menu-label {
+  opacity: 1;
+  font-weight: 600;
+  color: #f6b47b;
+}
+
+/* LÍNEA GUÍA DESLIZANTE */
+.indicator {
+  position: absolute;
+  bottom: 2px;
+  height: 2px;
+  background: linear-gradient(90deg, #f6b47b, #ff9a56);
+  border-radius: 1px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(246, 180, 123, 0.4);
+}
+
+/* Imagen del ícono */
+.menu-image {
+  height: 32px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.menu-icon.fallback-icon {
+  display: none;
+}
+
+.menu-icon-container.active .menu-image {
+  filter: brightness(1.1) saturate(1.2);
+  box-shadow: 0 2px 8px rgba(246, 180, 123, 0.3);
+}
+
+.menu-icon-container.active .menu-icon {
+  filter: brightness(1.2);
+}
+
+/* --------- TABLET (≥ 600px) --------- */
+@media (min-width: 600px) {
+  .menu-nav {
+    padding: 8px 10px;
+    max-width: 700px;
+  }
+
+  .menu-icon-container {
+    padding: 10px 6px;
+  }
+
+  .menu-icon {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .menu-label {
+    font-size: 10px;
+  }
+
+  .menu-image {
+    height: 40px;
+  }
+
+  .indicator {
+    bottom: 4px;
+  }
+}
+
+/* --------- DESKTOP (≥ 900px) --------- */
+@media (min-width: 900px) {
+  .menu-nav {
+    padding: 10px 12px;
+    max-width: 900px;
+  }
+
+  .icons-container {
+    gap: 6px;
+  }
+
+  .menu-icon-container {
+    padding: 12px 10px;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+  }
+
+  .menu-label {
+    font-size: 11px;
+    letter-spacing: 0.02em;
+  }
+
+  .menu-image {
+    height: 50px;
+  }
+}

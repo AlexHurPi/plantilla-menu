@@ -1,145 +1,164 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import './imageCarouselManual-styles.css';
+import './imageCarouselManual-styles.css'
 
-const ImageCarouselManual = () => {
+const ImageCarouselManual = ({ dataKey, color }) => {
   const { t } = useTranslation();
-  
-  // Estados del carrusel principal
   const [currentIndex, setCurrentIndex] = useState(0);
-  
-  // Estados del modal
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalIndex, setModalIndex] = useState(0);
 
-  // ✅ Datos del carrusel desde i18n (SIEMPRE PRIMERO)
-  const productsData = t('carousel.products', { returnObjects: true }) || [];
-  const carouselTitle = t('carousel.title');
+  const trackRef = useRef(null);
+  const startX = useRef(0);
+  const isDragging = useRef(false);
 
-  // Funciones del carrusel principal
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setCurrentIndex(0);
+  }, [dataKey]);
+
+  const productsData = t(`carousel.${dataKey}`, { returnObjects: true }) || [];
+
+  const titleMap = {
+    arrozconleche: 'carousel.title1',
+    obleas: 'carousel.title2',
+    merengones: 'carousel.title3',
+    fresasconcrema: 'carousel.title4',
+    tortasybrownie: 'carousel.title5',
+    lasaña: 'carousel.title6',
+    ensalada: 'carousel.title7',
+    copasyhelados: 'carousel.title8',
+  };
+
+  const carouselTitle = t(titleMap[dataKey]);
+
+  if (!productsData.length) {
+    return (
+      <section className="manual-carousel-section">
+        <div style={{ textAlign: 'center', padding: '2rem', color: '#666' }}>
+          No hay datos para "{dataKey}"
+        </div>
+      </section>
+    );
+  }
+
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % productsData.length);
+    setCurrentIndex((prev) => Math.min(prev + 1, productsData.length - 1));
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + productsData.length) % productsData.length);
+    setCurrentIndex((prev) => Math.max(prev - 1, 0));
   };
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
   };
 
-  // Funciones del modal
-  const openModal = (index) => {
-    setModalIndex(index);
-    setIsModalOpen(true);
-    document.body.style.overflow = 'hidden'; // Evita scroll de fondo
+  const handleTouchStart = (e) => {
+    startX.current = e.touches[0].clientX;
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-    document.body.style.overflow = 'unset'; // Restaura scroll
+  const handleTouchEnd = (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX.current - endX;
+
+    if (diff > 50) nextSlide();
+    else if (diff < -50) prevSlide();
   };
 
-  const nextModal = () => {
-    setModalIndex((prev) => (prev + 1) % productsData.length);
+  const handleMouseDown = (e) => {
+    isDragging.current = true;
+    startX.current = e.clientX;
   };
 
-  const prevModal = () => {
-    setModalIndex((prev) => (prev - 1 + productsData.length) % productsData.length);
+  const handleMouseUp = (e) => {
+    if (!isDragging.current) return;
+    isDragging.current = false;
+    
+    const diff = startX.current - e.clientX;
+
+    if (diff > 50) nextSlide();
+    else if (diff < -50) prevSlide();
   };
 
-  // Manejo de teclas
-  useEffect(() => {
-    const handleKey = (e) => {
-      if (!isModalOpen) return;
-      if (e.key === 'Escape') closeModal();
-      if (e.key === 'ArrowRight') nextModal();
-      if (e.key === 'ArrowLeft') prevModal();
-    };
-    document.addEventListener('keydown', handleKey);
-    return () => document.removeEventListener('keydown', handleKey);
-  }, [isModalOpen]);
+  const handleMouseLeave = () => {
+    isDragging.current = false;
+  };
 
-  // Fallback si no hay productos
-  if (!productsData.length) {
-    return <div>No hay productos disponibles</div>;
-  }
+  const handleWheel = (e) => {
+    if (Math.abs(e.deltaX) > 20) {
+      if (e.deltaX > 0) nextSlide();
+      else prevSlide();
+    }
+  };
 
   return (
-    <>
-      {/* MODAL - DENTRO DEL RETURN PRINCIPAL */}
-      {isModalOpen && (
-        <div className="fullscreen-modal" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={closeModal}>×</button>
-            <button className="modal-prev" onClick={prevModal}>❮</button>
-            <div className='image-container'>
-              <img 
-              src={`${import.meta.env.BASE_URL}${productsData[modalIndex].image}`} 
-              alt={productsData[modalIndex].title} />
-            </div>
-                        
-            <div className="modal-info">
-              <h3>{productsData[modalIndex].title}</h3>
-              <p>{productsData[modalIndex].description}</p>
-              <div className="price">{productsData[modalIndex].price}</div>
-            </div>
-            
-            <button className="modal-next" onClick={nextModal}>❯</button>
-          </div>
-        </div>
-      )}
-
-      {/* CARRUSEL PRINCIPAL */}
-      <section className="manual-carousel-section">
-        {carouselTitle && <h2 className="carousel-title">{carouselTitle}</h2>}
+    <section className="manual-carousel-section">
+      <div className="carousel-wrapper">
+        <h2 className="carousel-title" style={{ backgroundColor: color }}>{carouselTitle}</h2>
         
-        <div className="carousel-wrapper">
-          <div 
-            className="carousel-track" 
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-            {productsData.map((product, index) => (
-              <div key={product.id} className="card-slide">
-                <div className="card-inner">
-                  <div 
-                    className="card-image" 
-                    onClick={() => openModal(index)} // CORREGIDO: usar INDEX
-                    role="button"
-                    tabIndex={0}
-                  >
-                    <img 
-                      src={`${import.meta.env.BASE_URL}${product.image}`} 
-                      alt={product.title} 
-                      loading="lazy" 
-                    />
+        {/* ✅ CONTADOR "1 de X" AGREGADO AQUÍ */}
+        <div className="carousel-counter">
+          {currentIndex + 1} / {productsData.length}
+        </div>
+
+        <div 
+          className="carousel-track" 
+          ref={trackRef}
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseLeave}
+          onWheel={handleWheel}
+        >
+          {productsData.map((product, index) => (
+            <div key={product.id || index} className="card-slide">
+              <div className="card-inner">
+                <div className="card-image" role="button" tabIndex={0}>
+                  <img
+                    src={`${import.meta.env.BASE_URL}${product.image}`}
+                    alt={product.title}
+                    loading="lazy"
+                  />
+                </div>
+
+                <div className="card-content">
+                  <h3>{product.title}</h3>
+                  <p>{product.description}</p>
+                  <div className="price">
+                    <h1>{product.price}</h1>
+                    <h1>{product.price2}</h1>
                   </div>
-                  <div className="card-content">
-                    <h3>{product.title}</h3>
-                    <p>{product.description}</p>
-                    <div className="price"><h1>{product.price}</h1> <h1>{product.price2}</h1> </div>
-                  </div>                    
+                  <div className="price-description">
+                    <p>{t('carousel.precio1')}</p>
+                    <p>{t('carousel.precio2')}</p>                    
+                  </div>
                 </div>
               </div>
-            ))}
-          </div>
-
-          <button className="nav-btn prev-btn" onClick={prevSlide}>❮</button>
-          <button className="nav-btn next-btn" onClick={nextSlide}>❯</button>
-        </div>
-
-        <div className="dots-container">
-          {productsData.map((_, index) => (
-            <button
-              key={`dot-${index}`}
-              className={`dot ${index === currentIndex ? 'active' : ''}`}
-              onClick={() => goToSlide(index)}
-            />
+            </div>
           ))}
         </div>
-      </section>
-    </>
+
+        {/* ✅ BOTONES SE OCULTAN SI ESTÁN EN LOS EXTREMOS */}
+        {currentIndex > 0 && (
+          <button className="nav-btn prev-btn" onClick={prevSlide}>❮</button>
+        )}
+        
+        {currentIndex < productsData.length - 1 && (
+          <button className="nav-btn next-btn" onClick={nextSlide}>❯</button>
+        )}
+      </div>
+
+     {/*} <div className="dots-container">
+        {productsData.map((_, index) => (
+          <button
+            key={`dot-${index}`}
+            className={`dot ${index === currentIndex ? 'active' : ''}`}
+            onClick={() => goToSlide(index)}
+          />
+        ))}
+      </div>*/}
+    </section>
   );
 };
 
