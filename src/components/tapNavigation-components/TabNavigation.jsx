@@ -8,8 +8,7 @@ const TabNavigation = () => {
   const tabs = [
     { id: 'starters', label: 'Dulce' },
     { id: 'mains', label: 'Salado' },
-    { id: 'dessert', label: 'Adiciones' },
-    
+    { id: 'dessert', label: 'Adiciones' },    
   ];
 
   return (

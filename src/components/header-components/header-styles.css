@@ -1,32 +1,17 @@
 
 /* header-styles.css */
-.custom-header {
+.header {
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 1000;
   backdrop-filter: blur(10px);  
 }
-
-
 /* Marca / logo */
 .custom-header__brand {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-.custom-header__logo-placeholder {
-  width: 36px;
-  height: 36px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #6366f1, #a855f7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.8rem;
-  color: #fff;
 }
 
 .custom-header__brand-text {
@@ -41,14 +26,6 @@
   right: 20px;
   top: 10px;
   z-index: 1000;
-}
-
-/* Quitar bullets y acomodar horizontal en desktop */
-.custom-header__nav-list {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
 }
 /* Responsive tweaks */
 @media (max-width: 991.98px) {
@@ -69,6 +46,14 @@
     text-align: center;
     margin: 0.5rem 0 0;
   }
+  .languageSelector-container {
+  display: flex;
+  position: absolute;
+  right: 2px;
+  top: 1px;
+  z-index: 1000;
+}
+
 }
 
 @media (min-width: 992px) {

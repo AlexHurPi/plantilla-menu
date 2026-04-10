@@ -12,7 +12,7 @@ import './App.css';
 function App() {
   return (
     <>
-      <Header />
+      <Header background={"var(--primary)"}/>
       <main className="flex-grow-1">
         <Routes>
           <Route path="/" element={<Inicio />} />{/**Para indicar cual archivo debe iniciar */}
@@ -20,7 +20,7 @@ function App() {
           <Route path="/servicios" element={<Servicios />} />
         </Routes>
       </main>
-      <Footer />
+      <Footer background={"var(--primary)"} dataKey={"footer.infofooter"}/>
     </>
   );
 }

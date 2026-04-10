@@ -1,4 +1,33 @@
-{
+{ 
+  "header":{
+    "title": "ORIGEN",
+    "slogan": "Postres y helados"
+  },
+  "inicio":{
+    "carousel1-title": "POSTRES",
+    "carousel2-title": "LASAÑAS Y ENSALADAS",
+    "carousel3-title": "COPAS Y HELADOS"
+  },
+  "footer": {
+    "infofooter": [
+      {
+          "empresa": "El nombre de tu empresa.",
+          "slogan": "Tu eslogan.",
+          "razonsocial": "Razón social: El nombre de tu empresa S.A.S.",
+          "nit": "NIT: 123456789-0",
+          "dondeestamos": "¿Dónde estamos?",
+          "ubicacion": "Ciudad, Departamento,País.",
+          "direccion": "Dirección: Calle Falsa 123, Ciudad, País.",
+          "correo": "usuario@empresa.com",
+          "telefono": "Teléfono: +57 123 456 7890",
+          "redessociales": "Síguenos en nuestras redes sociales:",
+          "facebook": "enlace a Facebook",
+          "twitter": "enlace a Twitter",
+          "instagram": "enlace a Instagram",
+          "final": "© 2026 EMPRESA S.A.S. Todos los derechos reservados."
+      }
+  ]
+  },
   "menu":{
     "postres":[
       { 
@@ -48,6 +77,8 @@
     ]
   },
   "carousel": {   
+      "precio1": "Para la mesa",
+      "precio2": "Para llevar", 
       "title1": "Arroz con leche",
       "arrozconleche":[       
       {
@@ -157,7 +188,7 @@
     "price": "$12.500",
     "price2": "$13.500"
   }
-],
+    ],
       "title3": "Merengones",
       "merengones":[
   {
@@ -176,7 +207,7 @@
     "price": "$18.000",
     "price2": "$19.200"
   }
-],
+    ],
     "title4":"Fresas y frutas con crema",
     "fresasconcrema":[
   {
@@ -227,7 +258,7 @@
     "price": "$17.000",
     "price2": "$18.200"
   }
-],
+    ],
     "title5": "Tortas y Brownie",
     "tortasybrownie":[
   {
@@ -254,7 +285,7 @@
     "price": "$12.500",
     "price2": "$13.500"
   }
-],
+    ],
   "title6": "Lasañas dulces",
   "lasaña": [
     {
@@ -281,7 +312,7 @@
       "price": "$15.000",
       "price2": "$16.000"
     }
-  ],
+    ],
   "title7": "Ensaladas de frutas",
   "ensalada": [
     {
@@ -300,7 +331,7 @@
       "price": "$28.500",
       "price2": "$30.000"
     }
-  ],  
+    ],  
   "title8": "COPAS Y HELADOS",
   "copasyhelados": [
     {
@@ -415,22 +446,6 @@
       "price": "$11.500",
       "price2": "$12.500"
     }
-  ],
-
-  "slogan": "Postres y helados",
-  "titulo-pagina": "Menú",
-  "subtitulo": "Desliza para ver nuestros productos.",
-  "precio1": "Para la mesa",
-  "precio2": "Para llevar",
-  "seccion1": "Seccion de productos",
-  "parrafo-seccion1": "Este es un párrafo de ejemplo para mostrar cómo se puede usar la internacionalización en una aplicación. Aquí puedes agregar cualquier texto que desees traducir al español. Recuerda que es importante mantener la coherencia en el uso del idioma en toda la aplicación para brindar una mejor experiencia al usuario. Puedes incluir instrucciones, descripciones o cualquier otro tipo de contenido que sea relevante para tu aplicación. La internacionalización permite que tu aplicación sea accesible a una audiencia más amplia, lo que puede aumentar su popularidad y éxito. ¡No olvides revisar la traducción para asegurarte de que sea precisa y adecuada para el contexto de tu aplicación!",
-  "seccion2": "Nombre de la sección 2",
-  "parrafo-seccion2": "Este es un texto descriptivo donde puedes explicar tu producto, servicio o cualquier información relevante. El diseño es moderno, limpio y se adapta a distintos tamaños de pantalla.",
-  "parrafo-seccion2a": "Puedes agregar mas descripcion acerca de esta imagen; el texto debe ser corto pero claro y conciso",
-  "seccion3": "Seccion 3",
-  "seccion3a": "Subtitulo Seccion 3",
-  "seccion4": "titulo Seccion 4",
-  "titulo-footer1": "¡Gracias por visitar nuestra aplicación!",
-  "texto-footer1": "Esperamos que disfrutes explorando todas las características..."
-  }
+    ]
+  }  
 }
